@@ -1,0 +1,62 @@
+body {
+  background-color: #16a085;
+}
+input{
+  height: 30px;
+  width: 250px;
+  background-color: #ddd;
+  color: black;
+  border: none;
+  font-size: 20px;
+}
+.body{
+  height: 350px;
+  width: 500px;
+  background-color: #ddd;
+  color: black;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 30px;
+}
+.header{
+  justify-self: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+.title{
+  justify-self: center;
+  font-size: 20px;
+}
+.text{
+  margin-top: 5px;
+  font-size: 18px;
+}
+.btndanger{
+  height: 40px;
+  width: 60px;
+  background-color: red;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+.btnedit{
+  height: 40px;
+  width: 60px;
+  background-color: rgb(0, 255, 247);
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-left: 80px;
+}
+.row {
+  justify-content: center;
+}
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+}

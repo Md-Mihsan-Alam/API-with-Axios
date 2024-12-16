@@ -8,8 +8,9 @@ export default function Card({ UserData, deleteHandler }) {
       const res = await DeleteData(id);
 
       if (res.status === 200) {
-        console.log(`Deleted post with ID: ${id}`);
+        console.log(`Deleted post ID: ${id}`);
         deleteHandler(id); 
+
       }
       
     } catch (error) {

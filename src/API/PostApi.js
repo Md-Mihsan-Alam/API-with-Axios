@@ -21,4 +21,8 @@ export const DeleteData = (id) =>{
     return Api.delete(`/posts/${id}`);
 }
 
+export const PostData = (post) =>{
+    return Api.post("/posts",post);
+}
+
 export default GetData;

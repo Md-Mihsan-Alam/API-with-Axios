@@ -25,4 +25,10 @@ export const PostData = (post) =>{
     return Api.post("/posts",post);
 }
 
+export const PutData = (id, updatedData) => {
+    return Api.put(`/posts/${id}`, updatedData);
+};
+  
+
+
 export default GetData;

@@ -1,7 +1,10 @@
 import React from 'react'
 import { DeleteData } from '../API/PostApi';
+// import { PostData } from '../API/PostApi';
 
-export default function Card({ UserData, deleteHandler }) {
+export default function Card({ UserData, deleteHandler, setUpdateData}) {
+
+
   const handleDeleteData = async (id) => {
 
     try {
@@ -19,6 +22,11 @@ export default function Card({ UserData, deleteHandler }) {
     
   };
 
+
+  const handlePutData = (UserData) =>{
+    setUpdateData(UserData);
+  }
+
   return (
     <div className="body">
 
@@ -26,7 +34,7 @@ export default function Card({ UserData, deleteHandler }) {
       <h5 className="title">{UserData.title}</h5>
       <p className="text">{UserData.body}</p>
 
-      <button type="button" className="btnedit">EDIT</button>
+      <button type="button" className="btnedit" onClick={() => handlePutData(UserData)}>EDIT</button>
       <button type="button" className="btndanger" onClick={() => handleDeleteData(UserData.id)}>DELETE</button>
 
     </div>

@@ -6,6 +6,8 @@ import AddForm from './Component/AddForm';
 export default function Post() {
 
   const [data, setData] = useState([]);
+  const [updateData, setUpdateData] = useState();
+
 
   const getuserData = async() =>{
     
@@ -39,7 +41,11 @@ export default function Post() {
   return (
     
     <>
-    <AddForm data={data} setdata={setData}/>
+    <AddForm
+     data={data}
+     setdata={setData}
+     updateData={updateData}
+     setUpdateData={setUpdateData}/>
 
     <div className="container">
     <ul className="row">
@@ -49,7 +55,7 @@ export default function Post() {
         
 
         <li className="col-md-4" key={Cdata.id}>
-          <Card UserData={Cdata} deleteHandler={deleteHandler}/>
+          <Card UserData={Cdata} deleteHandler={deleteHandler} setUpdateData={setUpdateData}/>
         </li>
 
       ))}
